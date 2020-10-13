@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="insertAuftraege.txt"
+  DTS:DTSID="{B0CE5E4B-232E-433B-8FD2-75FD123BDB4C}"
+  DTS:CreationName="FILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertAuftraege.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

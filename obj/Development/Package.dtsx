@@ -1,0 +1,985 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/12/2020 12:34:29 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-3DBJGBU"
+  DTS:CreatorName="DESKTOP-3DBJGBU\dev"
+  DTS:DTSID="{68C66F97-6521-456D-9566-ECA806B32CA8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{EFE4683F-1E9F-4218-B41E-5191950CFB65}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertAuftraege.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{B0CE5E4B-232E-433B-8FD2-75FD123BDB4C}"
+      DTS:ObjectName="insertAuftraege.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertAuftraege.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertAuftragspositionen.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{CC2359BC-9660-49E3-9BCA-0E39BC506857}"
+      DTS:ObjectName="insertAuftragspositionen.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertAuftragspositionen.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertBaustellen.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{F09EC1FD-88E9-48BF-9687-5E153541DCF8}"
+      DTS:ObjectName="insertBaustellen.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertBaustellen.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertDokumente.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{0CD53E82-6F99-4B8E-B031-EE788E2B2B70}"
+      DTS:ObjectName="insertDokumente.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertDokumente.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertKunden.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{66596FFC-4BDA-4F50-ACAE-36CE72AE6E09}"
+      DTS:ObjectName="insertKunden.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertKunden.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertNachrichten.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{142CA587-A52F-49F1-AA54-832DD4A81C3E}"
+      DTS:ObjectName="insertNachrichten.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertNachrichten.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertOffenePosten.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{8519A043-97A8-4A01-AE14-894BDB625C20}"
+      DTS:ObjectName="insertOffenePosten.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertOffenePosten.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertTermine.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{092AFA28-9D88-413B-A124-2198DFB559F1}"
+      DTS:ObjectName="insertTermine.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertTermine.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertVertreter.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{297BDF9C-1E08-4ED5-8EBA-6EF817B6002B}"
+      DTS:ObjectName="insertVertreter.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Projekte\DennertPortalSQLSkripte\insert\insertVertreter.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.DisDb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+      DTS:ObjectName="localhost.DisDb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=DisDb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Update Auftraege"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{ec23e9d5-8504-4a58-9c85-e4c26c601cd8}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Auftraege">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Auftraege\Insert Auftraege"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{981605b0-addb-472b-9a2f-a82818990690}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Auftraege"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertAuftraege.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Auftraege\Truncate Auftraege"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0a87f44c-988d-4ed5-8933-f00c80bb06a0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Auftraege"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Auftraege') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA; TRUNCATE TABLE dbo.Auftraege" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Auftraege.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{d921f79c-ce7a-455c-bf3e-fd41995b239c}"
+          DTS:From="Package\Update Auftraege\Truncate Auftraege"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Auftraege\Insert Auftraege" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Auftragspositionen"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{53229709-811c-46ba-9775-0eb205a53fae}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Auftragspositionen">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Auftragspositionen\Insert Auftragspositionen"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8c1bc5e6-8e16-4c7f-8c90-dee0febd8a84}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Auftragspositionen"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertAuftragspositionen.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Auftragspositionen\Truncate Auftragspositionen"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{07cce2b1-bb35-40a6-8cf6-1f7bcc860708}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Auftragspositionen"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Auftragspositionen') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA; TRUNCATE TABLE dbo.Auftragspositionen" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Auftragspositionen.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1cddaacb-87bc-4e61-ba02-e167fdb96c8e}"
+          DTS:From="Package\Update Auftragspositionen\Truncate Auftragspositionen"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Auftragspositionen\Insert Auftragspositionen" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Baustellen"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{89e3aec6-4706-4863-852c-8ae6ef10037a}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Baustellen">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Baustellen\Insert Baustellen"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8ff457c1-7fc5-4496-a1cd-a5dcb705b7d6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Baustellen"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertBaustellen.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Baustellen\Truncate Baustellen"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{45de3d8b-5977-4407-b8c6-0bff610bf960}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Baustellen"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Baustellen') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA; TRUNCATE TABLE dbo.Baustellen" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Baustellen.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{564d783b-4bc2-429c-b134-71c799b03eaf}"
+          DTS:From="Package\Update Baustellen\Truncate Baustellen"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Baustellen\Insert Baustellen" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Dokumente"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{c058fac5-7684-4be1-bd35-c82c934ffd04}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Dokumente">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Dokumente\Insert Dokumente"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{18cde763-0570-46d9-8def-8504a1ecc157}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Dokumente"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertDokumente.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Dokumente\Truncate Dokumente"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1da93cf3-43db-41f0-ae5d-c5d7f87a2391}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Dokumente"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Dokumente') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA; TRUNCATE TABLE dbo.Dokumente" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Dokumente.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{e601ea06-1a5a-4a60-8998-b376256fa93f}"
+          DTS:From="Package\Update Dokumente\Truncate Dokumente"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Dokumente\Insert Dokumente" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Kunden"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{8e240b9d-8c6e-4a1c-91e6-4b710f5a00f3}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Kunden">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Kunden\Insert Kunden"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d38b84b9-c976-4611-9d81-4cbdb21112bd}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Kunden"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertKunden.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Kunden\Truncate Kunden"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{433345d7-a690-4118-b8eb-472f37601b57}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Kunden"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Kunden') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA; TRUNCATE TABLE dbo.Kunden" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Kunden.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{3a448fd4-a90b-472a-9d4c-b7d967842a34}"
+          DTS:From="Package\Update Kunden\Truncate Kunden"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Kunden\Insert Kunden" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Nachrichten"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{321cfba0-656c-4221-9175-cb20dee5b282}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Nachrichten">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Nachrichten\Insert Nachrichten"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{ad204ff1-951d-47d6-8545-d35e08680c06}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Nachrichten"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertNachrichten.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Nachrichten\Truncate Nachrichten"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{095aa08b-a9ca-47b2-bdc7-61b07e635ccc}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Nachrichten"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Nachrichten') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA; TRUNCATE TABLE dbo.Nachrichten" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Nachrichten.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{d2368ab5-516a-4660-bf08-43a072cce00f}"
+          DTS:From="Package\Update Nachrichten\Truncate Nachrichten"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Nachrichten\Insert Nachrichten" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update OffenePosten"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{55b9759c-955b-41db-b758-4406fb2b7d66}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update OffenePosten">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update OffenePosten\Insert OffenePosten"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{21789ca9-e032-4c57-ae7b-8f958ddd908d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert OffenePosten"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="6">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertOffenePosten.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update OffenePosten\Truncate OffenePosten"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6244caf5-f573-43dd-8c9f-45b1f756cf37}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate OffenePosten"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="6">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.OffenePosten') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA; TRUNCATE TABLE dbo.OffenePosten" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update OffenePosten.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{7bb926ef-b3ab-4a01-a803-0dbb357c0737}"
+          DTS:From="Package\Update OffenePosten\Truncate OffenePosten"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update OffenePosten\Insert OffenePosten" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Termine"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{89f390d3-94dc-4186-8fd9-3a580c25721e}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Termine">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Termine\Insert Termine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d5125a8b-2883-4970-bcd2-57f2eed5b46d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Termine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="7">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertTermine.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Termine\Truncate Termine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2ed45982-51be-4975-a6ac-9236735ba6d8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Termine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="7">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Termine') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA;&#x9;TRUNCATE TABLE dbo.Termine" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Termine.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{4a5b87f3-bf22-4d28-8ed2-5b28440e112b}"
+          DTS:From="Package\Update Termine\Truncate Termine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Termine\Insert Termine" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Vertreter"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{8A9019DF-FF48-4298-8C1E-C3B9D9B3804B}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Vertreter">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Update Vertreter\Insert Vertreter"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{74F904DC-84B7-4175-81C4-D3776709AC8E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert Vertreter"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="8">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="insertVertreter.txt" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Update Vertreter\Truncate Vertreter"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{03547AED-01F2-4711-9CE4-0F5288D4659D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Vertreter"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="8">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5D42033-7E26-481F-A7CC-2BF4641E0F9A}"
+              SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'dbo.Vertreter') and OBJECTPROPERTY(id, N'IsUserTable') = 1)&#xA;&#x9;TRUNCATE TABLE dbo.Vertreter" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Update Vertreter.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{51879772-DE84-4DF0-9716-13D5B2BBA8B1}"
+          DTS:From="Package\Update Vertreter\Truncate Vertreter"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Update Vertreter\Insert Vertreter" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Update Nachrichten\Insert Nachrichten"
+          TopLeft="36.416657223056,164.236845093091" />
+        <NodeLayout
+          Size="196,42.6666666666667"
+          Id="Package\Update Nachrichten\Truncate Nachrichten"
+          TopLeft="25.1666573906938,10.9736843135549" />
+        <EdgeLayout
+          Id="Package\Update Nachrichten.PrecedenceConstraints[Constraint]"
+          TopLeft="121.458323973542,53.6403509802216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110.596494112869"
+              Start="0,0"
+              End="0,103.096494112869">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.096494112869" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="235.333333333334,258.666666666667"
+          Size="235.333333333334,301.333333333334"
+          Id="Package\Update Nachrichten"
+          TopLeft="868.499990724027,147.789476465981" />
+        <NodeLayout
+          Size="186,42.6666666666667"
+          Id="Package\Update OffenePosten\Insert OffenePosten"
+          TopLeft="28.9166573348147,164.921055632285" />
+        <NodeLayout
+          Size="196,42.6666666666667"
+          Id="Package\Update OffenePosten\Truncate OffenePosten"
+          TopLeft="25.1666573906938,10.9736843135549" />
+        <EdgeLayout
+          Id="Package\Update OffenePosten.PrecedenceConstraints[Constraint]"
+          TopLeft="122.541657362754,53.6403509802216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111.280704652063"
+              Start="0,0"
+              End="0,103.780704652063">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.780704652063" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="235.333333333334,258.666666666667"
+          Size="235.333333333334,301.333333333334"
+          Id="Package\Update OffenePosten"
+          TopLeft="606.291656897093,146.535087989748" />
+        <NodeLayout
+          Size="161.333333333334,42.6666666666667"
+          Id="Package\Update Termine\Insert Termine"
+          TopLeft="20.7916574558865,165.605266171479" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Update Termine\Truncate Termine"
+          TopLeft="25.1666573906938,10.9736843135549" />
+        <EdgeLayout
+          Id="Package\Update Termine.PrecedenceConstraints[Constraint]"
+          TopLeft="105.312490756623,53.6403509802215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111.964915191257"
+              Start="0,0"
+              End="0,104.464915191257">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,104.464915191257" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205.333333333334,263.333333333334"
+          Size="205.333333333334,306"
+          Id="Package\Update Termine"
+          TopLeft="384.541664999599,146.421055387592" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Update Vertreter\Insert Vertreter"
+          TopLeft="20.7916574558865,165.605266171479" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Update Vertreter\Truncate Vertreter"
+          TopLeft="25.1666573906938,9.60526323516615" />
+        <EdgeLayout
+          Id="Package\Update Vertreter.PrecedenceConstraints[Constraint]"
+          TopLeft="106.97915742329,52.2719299018328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,113.333336269647"
+              Start="0,0"
+              End="0,105.833336269647">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,105.833336269647" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="212.666666666667,258.666666666667"
+          Size="212.666666666667,301.333333333334"
+          Id="Package\Update Vertreter"
+          TopLeft="152.499997727573,145.736844848398" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Update Kunden\Insert Kunden"
+          TopLeft="36.416657223056,164.236845093091" />
+        <NodeLayout
+          Size="196,42.6666666666667"
+          Id="Package\Update Kunden\Truncate Kunden"
+          TopLeft="25.1666573906938,10.9736843135549" />
+        <EdgeLayout
+          Id="Package\Update Kunden.PrecedenceConstraints[Constraint]"
+          TopLeft="121.458323973542,53.6403509802216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110.596494112869"
+              Start="0,0"
+              End="0,103.096494112869">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.096494112869" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="235.333333333334,258.666666666667"
+          Size="235.333333333334,301.333333333334"
+          Id="Package\Update Kunden"
+          TopLeft="1163.83332405736,145.736844848398" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Update Dokumente\Insert Dokumente"
+          TopLeft="36.416657223056,164.236845093091" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\Update Dokumente\Truncate Dokumente"
+          TopLeft="25.1666573906938,10.9736843135549" />
+        <EdgeLayout
+          Id="Package\Update Dokumente.PrecedenceConstraints[Constraint]"
+          TopLeft="117.124990640208,53.6403509802216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110.596494112869"
+              Start="0,0"
+              End="0,103.096494112869">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.096494112869" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="235.333333333334,258.666666666667"
+          Size="235.333333333334,302"
+          Id="Package\Update Dokumente"
+          TopLeft="149.999997764826,492.631588219936" />
+        <NodeLayout
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Update Baustellen\Insert Baustellen"
+          TopLeft="36.416657223056,164.236845093091" />
+        <NodeLayout
+          Size="196,42.6666666666667"
+          Id="Package\Update Baustellen\Truncate Baustellen"
+          TopLeft="25.1666573906938,10.9736843135549" />
+        <EdgeLayout
+          Id="Package\Update Baustellen.PrecedenceConstraints[Constraint]"
+          TopLeft="119.458323973542,53.6403509802216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110.596494112869"
+              Start="0,0"
+              End="0,103.096494112869">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.096494112869" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="235.333333333334,258.666666666667"
+          Size="235.333333333334,301.333333333334"
+          Id="Package\Update Baustellen"
+          TopLeft="412.291672990346,495.368430376714" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Update Auftragspositionen\Insert Auftragspositionen"
+          TopLeft="36.416657223056,164.236845093091" />
+        <NodeLayout
+          Size="196,42.6666666666667"
+          Id="Package\Update Auftragspositionen\Truncate Auftragspositionen"
+          TopLeft="25.1666573906939,10.9736843135548" />
+        <EdgeLayout
+          Id="Package\Update Auftragspositionen.PrecedenceConstraints[Constraint]"
+          TopLeft="121.458323973542,53.6403509802215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110.59649411287"
+              Start="0,0"
+              End="0,103.09649411287">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.09649411287" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="235.333333333334,258.666666666667"
+          Size="235.333333333334,301.333333333334"
+          Id="Package\Update Auftragspositionen"
+          TopLeft="674.791669078791,500.842114690269" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Update Auftraege\Insert Auftraege"
+          TopLeft="36.416657223056,164.236845093091" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Update Auftraege\Truncate Auftraege"
+          TopLeft="27.0416573627541,10.9736843135549" />
+        <EdgeLayout
+          Id="Package\Update Auftraege.PrecedenceConstraints[Constraint]"
+          TopLeft="116.062490626238,53.6403509802216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110.596494112869"
+              Start="0,0"
+              End="0,103.096494112869">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.096494112869" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="235.333333333334,258.666666666667"
+          Size="235.333333333334,301.333333333334"
+          Id="Package\Update Auftraege"
+          TopLeft="964.791664757454,500.842114690269" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
